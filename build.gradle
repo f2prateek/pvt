@@ -1,0 +1,36 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:2.1.2'
+  }
+}
+
+allprojects {
+  repositories {
+    mavenCentral()
+  }
+}
+
+ext {
+  minSdkVersion = 9
+  targetSdkVersion = 24
+  compileSdkVersion = 24
+  buildToolsVersion = '24.0.0'
+  sourceCompatibilityVersion = JavaVersion.VERSION_1_7
+  targetCompatibilityVersion = JavaVersion.VERSION_1_7
+}
+
+ext.deps = [
+    // Test dependencies
+    junit      : 'junit:junit:4.11',
+    festassert : 'org.easytesting:fest-assert-core:2.0M10',
+    festandroid: 'com.squareup:fest-android:1.0.7',
+    mockitocore: 'org.mockito:mockito-core:1.9.5',
+    robolectric: 'org.robolectric:robolectric:3.0',
+
+    // Lint dependencies
+    lintapi    : 'com.android.tools.lint:lint-api:24.3.1',
+    lintchecks : 'com.android.tools.lint:lint-checks:24.3.1'
+]

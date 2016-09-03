@@ -1,0 +1,4 @@
+include ':pvt'
+include ':pvt-lint'
+
+rootProject.name = 'pvt-root'
